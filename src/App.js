@@ -69,8 +69,8 @@ function App() {
         </form>
 
         {fetched && <Card {...weather} />}
-        {isLoading && <Loading />}
-        {isError && <Error isEmpty={isEmpty} />}
+        {isLoading && <Loading isLoading={isLoading} />}
+        {isError && <Error isEmpty={isEmpty} isError={isError} />}
       </div>
     </>
   );
