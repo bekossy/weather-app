@@ -1,7 +1,11 @@
 import React from "react";
 
 export const Error = (props) => {
-  const { isEmpty } = props;
+  const { isEmpty, isError } = props;
+
+  if (isError) {
+    document.body.style.background = "#a3a3a3";
+  }
   return (
     <>
       <div className="empty">
