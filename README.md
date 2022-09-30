@@ -1,3 +1,15 @@
+# Weather App
+
+This Weather app project fetches data from the [OpenWeather API](https://openweathermap.org/) and displays the
+
+- Temperature of the location both in Celcius and Fahrenheit.
+
+- The current weather condition of the inputted location.
+
+- An icon based on the weather description of the location.
+
+- Time of the inputted location.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
