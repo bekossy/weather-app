@@ -18,25 +18,27 @@ const Card = (props) => {
   const time = new Date();
   let hour = time.getHours();
   let min = time.getMinutes();
+  let dayTime = null;
   if (hour < 10) {
     hour = `0${hour}`;
   }
   if (min < 10) {
     min = `0${min}`;
   }
-  if (time.getHours() >= 5 || time.getHours() <= 18) {
-    // lightTime = day;
+
+  if (time.getHours() <= 17) {
+    dayTime = day;
     document.body.style.background = "linear-gradient(1deg, white, #6390bd)";
   }
-  if (time.getHours() > 18 || time.getHours() <= 4) {
-    // lightTime = night;
-    document.body.style.background = "linear-gradient(1deg, black, #072849);";
+  if (time.getHours() >= 18) {
+    dayTime = night;
+    document.body.style.background = "linear-gradient(1deg, black, #072849)";
   }
 
   return (
     <>
       <div className="card">
-        <img src={day} alt="" />
+        <img src={dayTime} alt="" />
         <div className="icon">
           <img
             src={"http://openweathermap.org/img/w/" + state.icon + ".png"}
